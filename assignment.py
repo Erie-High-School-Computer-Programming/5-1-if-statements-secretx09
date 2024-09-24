@@ -4,8 +4,10 @@ def  check_age_21(age: int) -> bool:
     return True if the age is 21 or older, otherwise return False
 
     """
-
-    raise NotImplementedError()
+    if age >= 21:
+        return True
+    else: 
+        return False
 
 
 
@@ -16,7 +18,11 @@ def check_grade_level(grade: str) -> bool:
     and it must print the grade level like freshman, sophomore, junior, senior if it is valid
     """
 
-    raise NotImplementedError()
+    grade = int(grade)
+    if grade >= 9 and grade <= 12: 
+        return True
+    else: 
+        return False
 
 
 def check_date_of_birth(date_of_birth: str) -> bool:
@@ -26,7 +32,11 @@ def check_date_of_birth(date_of_birth: str) -> bool:
     and it must return the current year if it is valid
     """
 
-    raise NotImplementedError()  
+    date_of_birth = int(date_of_birth)
+    if date_of_birth >= 1900 and date_of_birth <= 2024: 
+        return True
+    else: 
+        return False
 
 
 
@@ -36,10 +46,12 @@ def ckeck_the_list_of_cars(car_list: list) -> bool:
     return True if the list contains at least 3 cars with different model, otherwise return False
     and it must return the number of cars with different model if it is valid
     """
-
-    raise NotImplementedError()
-
-
+    car_list = set(car_list)
+    car_list = list(car_list)
+    if len(car_list) >= 3:
+        return True
+    else: 
+        return False
 
 def check_if_you_can_drive(can_you_drive: str) -> bool:
     """
@@ -48,8 +60,14 @@ def check_if_you_can_drive(can_you_drive: str) -> bool:
     and it must return 'You can drive' if it is valid
     """
 
-    raise NotImplementedError()
-
+    if can_you_drive.lower() == "yes":
+        print("You can drive")
+        return True
+    elif can_you_drive.lower() == "no":
+        print("You can drive")
+        return True
+    else: 
+        return False
 
 
 def check_weather(weather: str) -> bool:
@@ -59,7 +77,10 @@ def check_weather(weather: str) -> bool:
     and check if the weather is in the list if true return True otherwise return False
     and it must return the weather if it is valid
     """
-    raise NotImplementedError()
+    if weather == "sunny" or weather == "rainy" or weather == "snowy" or weather == "wind":
+        return True
+    else:
+        return False
 
 
 def check_if_you_can_play_game(can_you_play_game: str) -> bool:
@@ -68,8 +89,7 @@ def check_if_you_can_play_game(can_you_play_game: str) -> bool:
     make it random generate a random boolean value (True or False)
     and it must return 'You can play game' if it is valid
     """
-
-    raise NotImplementedError()
+    return False
 
 
 
@@ -81,8 +101,7 @@ def check_study_time_or_play_time(study_time_or_play_time: str) -> bool:
     and check if the study_time_or_play_time is in the list if true return True otherwise return False
     and it must return the study_time_or_play_time if it is valid
     """
-
-    raise NotImplementedError()
+    return study_time_or_play_time in ['study', 'play']
 
 
 
@@ -92,9 +111,18 @@ def make_the_input_store_in_variable(input_string: str) -> str:
     return the user_input string
     and use if-else statements to check the type of the input_string and convert it to the appropriate data type
     """
-    raise NotImplementedError()
+    user_input = input_string
 
+    try :
+        user_input = float(user_input)
 
+        if user_input == int(user_input):
+            return int(user_input)
+        else: 
+            return user_input
+
+    except:
+        return user_input
 
 
 def check_if_the_number_is_even(number: int) -> bool:
@@ -102,4 +130,4 @@ def check_if_the_number_is_even(number: int) -> bool:
     Implement a function that checks if a given number is even
     return True if the number is even, otherwise return False
     """
-    raise NotImplementedError()
+    return number % 2 == 0
